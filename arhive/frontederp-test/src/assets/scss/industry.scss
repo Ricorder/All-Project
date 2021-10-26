@@ -1,0 +1,79 @@
+@mixin width-child {
+  @for $i from 1 through 4 {
+    &:nth-child(#{$i}) {
+      min-width: calc(25% - 60px);
+    }
+  }
+}
+
+.industry {
+
+  &-wrapper {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  &-block {
+    display: flex;
+    flex-direction: column;
+    min-height: 100px;
+    margin: 0 16px 30px;
+    @include width-child();
+    &-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+
+      &-circle {
+        display: flex;
+        justify-content: center;
+        align-items: center;;
+        border-radius: 50%;
+        min-width: 40px;
+        max-width: 500px;
+        min-height: 40px;
+        max-height: 500px;
+        color: white;
+        transition: all ease .3s;
+        cursor: pointer;
+
+        &:hover {
+          box-shadow: $fancy-shadow;
+        }
+
+        &:active {
+          box-shadow: $fancy-shadow-active;
+        }
+
+        &-img, svg {
+          width: 36px;
+          height: 36px;
+          background-size: contain;
+        }
+      }
+    }
+
+    &-percent {
+      margin: 0 30px;
+      font-size: 18px;
+
+      &-large_true {
+        font-size: 24px;
+      }
+    }
+
+    &-name {
+      margin: 5px 30px;
+      max-width: 150px;
+      min-height: 60px;
+      height: 60px;
+    }
+  }
+
+  &-text {
+    margin-left: 10px;
+  }
+}

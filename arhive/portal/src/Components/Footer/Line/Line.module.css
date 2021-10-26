@@ -1,0 +1,8 @@
+.Line {
+  position: absolute;
+  width: 375px;
+  height: 0px;
+  left: 0px;
+  /* top: 961px; */
+  border: 0.5px solid #E0E0E0;
+}

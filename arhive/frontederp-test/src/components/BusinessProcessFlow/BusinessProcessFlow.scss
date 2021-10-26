@@ -1,0 +1,14 @@
+.business-process-flow {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1em;
+
+  & > * {
+    flex: 1;
+    margin: 0 0.45em;
+  }
+
+  &:first-child {
+    margin-left: 1.2em;
+  }
+}

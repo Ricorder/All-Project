@@ -1,0 +1,11 @@
+body {
+  position: relative;
+  width: 375px;
+  height: 1044px;
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

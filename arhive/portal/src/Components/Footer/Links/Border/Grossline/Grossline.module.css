@@ -1,0 +1,9 @@
+.Grossline {
+  position: absolute;
+  width: 133.64px;
+  height: 5px;
+  left: calc(50% - 133.64px/2 + 1px);
+  bottom: 8px;
+  background: #0f0f0f;
+  border-radius: 100px;
+}

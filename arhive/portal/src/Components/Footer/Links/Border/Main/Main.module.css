@@ -1,0 +1,7 @@
+.Main {
+  position: absolute;
+  width: 75px;
+  height: 49px;
+  left: calc(50% - 75px/2 - 130px);
+  /* top: 961px; */
+}

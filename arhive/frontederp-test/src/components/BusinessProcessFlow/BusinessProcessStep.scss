@@ -1,0 +1,152 @@
+@import "../../assets/scss/material-dashboard-pro-react/variables";
+.project__wrapper .business-process-flow > * {
+  margin: 0 3.5px;
+}
+.business-process-step__button-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  &:first-child {
+    span{
+      margin-right: 10px;
+    }
+    .business-process-step__button {
+      z-index: 3;
+      &:before {
+        border: none;
+        width: 20px;
+        height: 20px;
+        left: -15px;
+        border-radius: 50% 0 0 50%;
+        background-color: #ccc;
+      }
+      &.business-process-step__button--bright-blue:before {
+        background-color: #3B5998;
+      }
+      &.business-process-step__button--success:before {
+        background-color: #65A45B;
+      }
+    }
+  }
+  &:nth-child(2) {
+    .business-process-step__button {
+      z-index: 2;
+    }
+  }
+  &:nth-child(3) {
+    .business-process-step__button {
+      z-index: 1;
+    }
+  }
+  &:nth-child(4) {
+    & > span {
+      margin-left: 10px;
+    }
+    .business-process-step__button {
+      z-index: 0;
+      &:after {
+        border: none;
+        width: 20px;
+        height: 20px;
+        left:calc(100% - 5px);
+        border-radius: 0 50% 50% 0;
+        background-color: #ccc;
+      }
+      &.business-process-step__button--bright-blue:after {
+        background-color: #3B5998;
+      }
+      &.business-process-step__button--success:after {
+        background-color: #65A45B;
+      }
+    }
+  }
+}
+.business-process-step__button {
+  height: 2rem;
+  flex: 1;
+  font-size: 9px;
+}
+
+.business-process-step__circle-left {
+  display: none;
+  background: #CCCCCC;
+  position: absolute;
+  left: -20px;
+  top: 5px;
+  width: 2rem;
+  height: 2rem;
+  z-index: 222;
+  border-radius: 50%;
+}
+.business-process-step__circle-right {
+  display: none;
+  background: #CCCCCC;
+  position: absolute;
+  right: -12px;
+  top: 5px;
+  width: 2rem;
+  height: 2rem;
+  z-index: 222;
+  border-radius: 50%;
+}
+.business-process-step__circle--success {
+  background: #65A45B !important;
+}
+
+.business-process-step__circle--bright-blue {
+  background: #3B5998 !important;
+}
+
+.business-process-step__button::before {
+  background: #CCCCCC;
+
+  top: 0;
+  // height: calc((2rem / 2) + 0.25rem);
+  height: 1rem;
+  //transform: skew(28deg) translate3d(0, 0, 0);
+
+  content: "";
+  position: absolute;
+  left: -0.25rem;
+  right: -0.3125rem;
+  cursor: pointer;
+}
+.business-process-step__button--success::before {
+  background: $brand-success;
+}
+.business-process-step__button--bright-blue:before {
+  background: #0976b4;
+}
+
+.business-process-step__button::after {
+  background: #CCCCCC;
+
+  bottom: 0;
+  // height: 1rem;
+  height: 1rem;
+  //transform: skew(-30deg) translate3d(0, 0, 0);
+
+  content: "";
+  position: absolute;
+  left: -0.25rem;
+  right: -0.3125rem;
+  cursor: pointer;
+}
+.business-process-step__button--success::after {
+  background: $brand-success;
+}
+.business-process-step__button--bright-blue:after {
+  background: #0976b4;
+}
+
+.business-process-step__text {
+  z-index: 1;
+}
+
+.right-circle {
+  background: yellow;
+}
+
+.left-circle {
+  background: red;
+}

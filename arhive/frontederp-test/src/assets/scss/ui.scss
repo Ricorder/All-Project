@@ -1,0 +1,199 @@
+/*COLORS*/
+$primary: #9C27B0;
+$white:   #ffffff;
+$gr200:   #cccccc;
+.text {
+  &-left {
+    text-align: left;
+  }
+  &-center {
+    text-align: center !important;
+  }
+  &-bold {
+    font-weight: 600;
+  }
+  &-uppercase {
+    text-transform: uppercase;
+  }
+}
+.font-size {
+  &-small {
+    font-size: 14px;
+  }
+  &-reg {
+    font-size: 1rem;
+  }
+  &-med {
+    font-size: 1.5rem;
+  }
+}
+.nowrap {
+
+}
+table {
+  overflow-y: hidden !important;
+}
+table thead th:last-child {
+  text-align: right;
+}
+table tbody td:last-child {
+  text-align: right;
+}
+/*Header*/
+header {
+  @media screen and (max-width: 959px) {
+    width: 100% !important;
+  }
+}
+.total {
+  &-box {
+    border-top: 2px solid rgba(85, 85, 85, 0.4);
+    position: relative;
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+  }
+  width: 100%;
+  border-collapse: collapse;
+  &-row {
+
+  }
+  &-head {
+    padding: 12px 6px;
+    @extend .font-size-reg;
+    font-weight: 600;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    white-space: nowrap;
+  }
+  &-cell {
+    font-weight: 600;
+    font-size: 14px;
+    color: #000;
+  }
+  &-cell__center {
+    text-align: center;
+  }
+  &-cell__first {
+    padding-left: 12px;
+  }
+  tfoot {
+    border-top: 2px solid rgba(85, 85, 85, 0.4);
+  }
+}
+
+.card {
+  &__fluid {
+    height: calc(100% - 60px);
+  }
+}
+
+.paragraph {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #555555;
+  margin-bottom: 10px;
+}
+.switch {
+  &__control > span {
+    font-size: 14px !important;
+  }
+  &__primary {
+    .MuiSwitch-thumb {
+      width: 27px;
+      height: 27px;
+      border: 2px solid $primary;
+      background-color: $white;
+    }
+    &.MuiSwitch-root {
+      width: 74px;
+      height: 45px;
+    }
+    .MuiSwitch-track {
+      background-color: $gr200;
+      border-radius: 50px;
+    }
+    .MuiSwitch-colorSecondary.Mui-checked + .MuiSwitch-track {
+      border-radius: 50px;
+      opacity: 1;
+      background-color: $primary;
+    }
+  }
+}
+
+.MuiFormControlLabel-label {
+  color: $black;
+  font-size: 14px;
+}
+.row-hovered {
+  font-weight: 600;
+  background-color: rgba(0, 0, 0, 0.07);
+  position: relative;
+  transition: all ease .5s;
+}
+.MuiList-root {
+  z-index: 99 !important;
+}
+
+.chart-date {
+  position: absolute;
+  right: 2px;
+  top: -15px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: #999;
+  font-size: 12px;
+  padding: 5px 0;
+  z-index: 999; //временно
+  svg {
+    width: 18px;
+    height: 18px;
+    fill: #999;
+    color: #999;
+    margin-right: 4px;
+  }
+  &__text {
+    margin-top: 2px;
+  }
+}
+.chart-header {
+  position: absolute;
+  top: -61px;
+  left: 0;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 300;
+  line-height: 1.5em;
+  color: #3C4858;
+  margin-top: 0;
+  min-height: auto;
+  margin-bottom: 0;
+  text-decoration: none;
+  padding: 0 15px;
+  width: 100%;
+  text-align: center;
+}
+.cell-md65 {
+  min-width: 570px;
+}
+.nowrap-md {
+  flex-wrap: nowrap !important;
+  @media screen and (max-width: 1279px) {
+    flex-wrap: wrap !important;
+  }
+}
+
+.justify {
+  &-center {
+    justify-content: center;
+  }
+}
+
+.menu {
+  &__small--item {
+    font-size: 12px !important;
+    min-height: 20px !important;
+  }
+}

@@ -1,0 +1,31 @@
+.LabelName {
+  /* position: absolute; */
+  /* left: 4.86%;
+  right: 85.28%;
+  top: 35%;
+  bottom: 93.34%; */
+}
+
+.Name {
+  position: absolute;
+  left: 7.71%;
+  right: 85.28%;
+  top: 35%;
+  bottom: 94.28%;
+}
+
+.Label1 {
+  position: absolute;
+  left: 4.86%;
+  right: 93.02%;
+  top: 25%;
+  bottom: 93.34%;
+}
+
+.Label2 {
+  position: absolute;
+  left: 4.8%;
+  right: 93.43%;
+  top: 39%;
+  bottom: 93.61%;
+}

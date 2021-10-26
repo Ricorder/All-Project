@@ -1,0 +1,14 @@
+.Title {
+  position: absolute;
+  width: 506px;
+  height: 48px;
+  left: 70px;
+  top: 139px;
+  font-family: SF UI Display;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  /* identical to box height */
+  color: #000000;
+}
