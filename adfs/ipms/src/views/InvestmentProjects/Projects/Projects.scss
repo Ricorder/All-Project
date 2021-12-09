@@ -1,0 +1,434 @@
+@charset "utf-8";
+@import "Project";
+@import "description/DetailedDescription";
+
+.project__name {
+  font-size: 18px !important;
+  color: #3C4858;
+  text-decoration: none;
+  font-weight: 300;
+  margin-top: 30px;
+  margin-bottom: 25px;
+  min-height: 32px;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  padding-right: 15px;
+  & small {
+    color: #3C4858;
+    font-size: 55%;
+    font-weight: 400;
+    line-height: 1;
+  }
+
+  margin-top: 0;
+  margin-bottom: 3px;
+  min-height: auto;
+
+  & a {
+    color: #3C4858;
+    text-decoration: none;
+    font-weight: 300;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    min-height: 32px;
+    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+
+    & small {
+      color: #777;
+      font-size: 55%;
+      font-weight: 400;
+      line-height: 1;
+    }
+
+    margin-top: .625rem;
+    margin-bottom: 0.75rem;
+    min-height: auto
+  }
+
+  font-size: 1.75em;
+  margin-top: 0px;
+  margin-bottom: 3px;
+}
+
+.projects__wrapper {
+  padding: 0 12px;
+  z-index: 0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+}
+
+.projects__header-wrapper {
+  margin: 0 0 !important;
+}
+
+.projects__table-wrapper {
+  padding: 10px 0 15px 0 !important;
+}
+
+.projects__table {
+  .rt-td {
+    font-size: 12px;
+    min-height: 45px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+  }
+  .rt-th {
+    font-size: 14px !important;
+    color: #333 !important;
+    padding-bottom: 15px !important;
+  }
+  .rt-noData {
+    position: static !important;
+    left: 0 !important;
+    top: 0 !important;
+    transform: none !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+  &-avatar {
+    flex: 40 0 auto !important;
+    width: 40px !important;
+    .rt-td {
+      font-size: 12px;
+    }
+  }
+
+  & .rt-tr.-odd {
+    background: inherit !important;
+  }
+
+  & .rt-thead {
+    border-bottom: solid 1px rgba(0, 0, 0, 0.05);
+  }
+
+  &.projects__table-highlight {
+    .rt-tr-group:hover{
+      background-color: rgba(0, 0, 0, 0.07);
+    }
+  }
+}
+.projects {
+  &__filter {
+    height: 97px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+    border-radius: 5px !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    margin-bottom: 10px !important;
+    &--header {
+      margin-left: 13px !important;
+    }
+    &--title {
+      @extend .project__wrapper--title;
+      color: #333333;
+      margin-top: 11px !important;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    &--cardIcon {
+      @extend .project__wrapper--cardIcon;
+      width: 46px;
+      height: 46px;
+      margin-top: -13px !important;
+      margin-right: 11px !important;
+      border-radius: 5px !important;
+      svg {
+        margin-top: 4px !important;
+      }
+    }
+    &--cardBody {
+      padding: 0px 8px 10px 8px !important;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+    }
+    &--form {
+      width: 100%;
+    }
+    &--formControl {
+      width: 100%;
+    }
+    &--dateRange {
+      @extend .detailed-description__date-range;
+      padding-left: 4px;
+      padding-right: 4px;
+      input:focus ~ label,
+      input:valid ~ label {
+        top: 10px !important;
+      }
+    }
+    &--input {
+      @extend .detailed-description__input;
+    }
+    &--infoTitle {
+      @extend .detailed-description__info-title;
+      top: 30px;
+      font-size: 12px;
+      color: #555555;
+    }
+    &--datepicker {
+      z-index: 5;
+      width: calc(50% - 4px) !important;
+      width: 100%;
+      font-size: 12px;
+      color: #555555;
+      .react-daterange-picker__wrapper {
+        border: none;
+        border-bottom: 1px solid #C4C4C4;
+        width: 100%;
+      }
+      .react-daterange-picker__inputGroup {
+        flex: 0;
+        min-width: auto;
+        padding: 0 0 0 4px;
+        &:first-child:before {
+          content: 'с';
+          margin-right: 4px;
+          color: #555555;
+        }
+        &:nth-child(3):before {
+          content: 'по';
+          margin-right: 4px;
+          color: #555555;
+        }
+      }
+      .react-daterange-picker__inputGroup__input {
+        padding: 0;
+        color: #555555;
+        &:invalid {
+          background: transparent;
+        }
+        &::placeholder {
+          color: #555555;
+          opacity: 1;
+        }
+        :-ms-input-placeholder {
+          color: #555555 !important;
+        }
+
+        ::-ms-input-placeholder {
+          color: #555555 !important;
+        }
+      }
+      .react-daterange-picker__inputGroup__input--hasLeadingZero {
+        margin-left: -0.54em;
+        padding-left: calc(1px + 0.54em);
+      }
+      .react-daterange-picker__range-divider {
+        display: none;
+      }
+      .react-daterange-picker__clear-button {
+        position: absolute;
+        right: 0;
+        top: -2px;
+        cursor: pointer;
+        padding: 4px;
+        &:hover {
+          fill: #E91E63;
+          stroke: #E91E63;
+        }
+        svg {
+          display: none;
+        }
+        &:before {
+          content: 'x';
+          color: #E91E63;
+          font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+          font-weight: bold;
+          font-size: 12px;
+          line-height: 14px;
+        }
+      }
+      .react-daterange-picker__calendar-button {
+        display: none;
+      }
+    }
+  }
+  &__grid-container {
+    position: relative;
+  }
+  &__grid--fluid-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0 15px;
+    & > div {
+      margin-right: 15px;
+      flex: 1 1;
+      flex-basis: calc(20% - 15px);
+      min-width: 230px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    @media screen and (max-width: 1547px) {
+      & > div {
+        &:nth-child(3) {
+          margin-right: 0;
+        }
+        &:nth-child(4), &:last-child {
+          flex-basis: calc(50% - 15px);
+        }
+      }
+    }
+    @media screen and (max-width: 1056px) {
+      & > div {
+        &:nth-child(1), &:nth-child(2),
+        &:nth-child(3), &:nth-child(4) {
+          flex-basis: calc(50% - 15px);
+        }
+        &:nth-child(2), &:nth-child(4) {
+          margin-right: 0;
+        }
+        &:nth-child(3) {
+          margin-right: 15px;
+        }
+        &:last-child {
+          flex-basis: 100%;
+        }
+      }
+    }
+    @media screen and (max-width: 551px) {
+      & > div {
+        flex-basis: 100% !important;
+        margin-right: 0 !important;
+      }
+    }
+  }
+  &__clear-btn {
+    position: absolute;
+    right: 15px;
+    top: -15px;
+    padding: 4px 8px;
+    background: #d81b60;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0,.14), 0 7px 10px -5px rgba(233, 30, 99,.4);
+    border-radius: 4px;
+    color: #fff;
+    text-transform: uppercase;
+    transition: all ease .5s;
+    font-size: 12px;
+    cursor: pointer;
+
+    &:hover {
+      background: lighten(#d81b60, 10%);
+    }
+    &:active {
+      background: darken(#d81b60, 5%);
+      box-shadow: 0 4px 10px 0 rgba(0, 0, 0,.14), 0 7px 5px -5px rgba(233, 30, 99,.4);
+    }
+  }
+}
+.orgStructure1Filter {
+  &__form {
+    width: 100%;
+  }
+  &__select {
+    width: 100%;
+    &:before {
+      border-bottom: 1px solid rgba(196, 196, 196, 0.4) !important;
+    }
+    div {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 12px;
+      line-height: 14px;
+      color: #555555;
+      padding-left: 4px;
+      //padding-right: 4px;
+    }
+    svg {
+      width: 16px;
+      height: 16px;
+      margin-top: 4px;
+    }
+  }
+  &__menu {
+    font-size: 12px !important;
+    min-height: 20px !important;
+  }
+}
+.date-filter {
+  &__filter {
+    height: 97px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+    border-radius: 5px !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    margin-bottom: 10px !important;
+
+    &--header {
+      margin-left: 13px !important;
+    }
+
+    &--title {
+      @extend .project__wrapper--title;
+      color: #333333;
+      margin-top: 11px !important;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &--cardIcon {
+      @extend .project__wrapper--cardIcon;
+      width: 46px;
+      height: 46px;
+      margin-top: -13px !important;
+      margin-right: 11px !important;
+      border-radius: 5px !important;
+      svg {
+        margin-top: 4px !important;
+      }
+    }
+
+    &--cardBody {
+      padding: 0px 8px 10px 8px !important;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+      font-size: 12px;
+      vertical-align: baseline;
+    }
+
+    &--form {
+      width: 100%;
+    }
+
+    &--formControl {
+      display: flex;
+      width: 100%;
+    }
+  }
+}
+.rdt.rdtOpen .rdtPicker {
+  margin-top: 24px;
+  &:first-child {
+    margin-right: 4px;
+    content: "sssddd";
+  }
+  &:last-child {
+    margin-left: 4px;
+  }
+}
+.datePickerFilter {
+  &__form {
+    @extend .orgStructure1Filter__form;
+  }
+  &__select {
+    width: calc(50% - 4px) !important;
+    font-size: 12px !important;
+    min-height: 20px !important;
+    @extend .orgStructure1Filter__select;
+    &:first-child {
+      margin-right: 4px;
+    }
+    &:last-child {
+      margin-left: 4px;
+    }
+  }
+  &__menu {
+    font-size: 12px !important;
+    min-height: 20px !important;
+  }
+
+}

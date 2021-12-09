@@ -1,0 +1,46 @@
+@import "./chart-colors.module.scss";
+
+.ct-legend {
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+    z-index: 10;
+
+    li {
+        flex: 1;
+        min-width: 140px;
+        word-break: keep-all;
+        list-style-type: none;
+        position: relative;
+        padding-left: 23px;
+        margin-bottom: 3px;
+    }
+
+    li:before {
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        left: 0;
+        content: '';
+        border: 3px solid transparent;
+        border-radius: 2px;
+    }
+
+    li.inactive:before {
+        background: transparent;
+    }
+
+    &.ct-legend-inside {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    @for $i from 0 to length($chart-colors) {
+        .ct-series-#{$i}:before {
+            background-color: nth($chart-colors, $i + 1);
+            border-color: nth($chart-colors, $i + 1);
+            border-radius: 50%;
+        }
+    }
+}

@@ -1,0 +1,86 @@
+@import "../../../../assets/scss/material-dashboard-pro-react/_colors";
+
+.details-files {
+    &__wrapper {
+        margin-top: 15px;
+        .ReactTable .rt-noData {
+            position: static;
+            transform: none;
+        }
+        .filepond--drop-label.filepond--drop-label label {
+            font-size: 10px;
+            font-weight: normal;
+            line-height: 12px;
+            color: #555;
+        }
+    }
+    &__container {
+        border: 1px solid #EEEEEE;
+        padding-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        width: 100%;
+        //height: 550px;
+        box-sizing: border-box;
+        overflow: auto;
+        position: relative;
+    }
+    &__uploader {
+        margin: 1em;
+    }
+    &__react-table {
+        .rt-thead .rt-th {
+            font-weight: 500 !important;
+            color: #555555 !important;
+            font-size: 10px !important;
+            padding: 6px 10px !important;
+            line-height: 1.3 !important;
+        }
+        .rt-thead .rt-th.-cursor-pointer > div:first-of-type:after {
+            opacity: 0 !important;
+            display: none !important;
+        }
+        .rt-thead .rt-th.-cursor-pointer:hover > div:first-of-type:after {
+            opacity: .4 !important;
+        }
+        .rt-td {
+            font-size: 9px;
+            line-height: 11px;
+            font-weight: normal;
+            color: #555555;
+            padding: 6px 10px !important;
+        }
+    }
+}
+
+.filepond--drop-label {
+    background: white;
+    border: 2px dashed $grey;
+}
+.filepond--drop-label {
+    background-color: #EEEEEE;
+}
+.actions-right svg {
+    width: 14px !important;
+    height: 14px !important;
+    fill: #757575 !important;
+    color: #757575;
+}
+.details-files__td-link {
+    width: 210px !important;
+    max-width: 210px;
+    white-space: nowrap;
+    & > a {
+        white-space: nowrap;
+    }
+}
+.details-files__td-type {
+    width: 125px !important;
+}
+.details-files__td-organ {
+    width: 137px !important;
+}
+.details-files__td-version {
+    width: 34px !important;
+    text-align: center !important;
+}

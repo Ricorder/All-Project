@@ -1,0 +1,43 @@
+.cardSubtitle {
+  margin-top: 0px;
+  min-height: auto;
+  text-align: right;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: 0px;
+  text-decoration: none;
+  white-space: nowrap;
+  font-size: 1.25vw;
+  color: black;
+  @media screen and (max-width: 1679px) {
+    font-size: 1.15vw;
+  }
+  @media screen and (max-width: 1600px) {
+    font-size: 1.1vw;
+  }
+  @media screen and (max-width: 1535px) {
+    font-size: 1vw;
+  }
+  @media screen and (max-width: 1380px) {
+    font-size: .95vw;
+  }
+  @media screen and (max-width: 1279px) {
+    font-size: 1.5vw;
+  }
+  @media screen and (max-width: 1140px) {
+    font-size: 1.4vw;
+  }
+  @media screen and (max-width: 1059px) {
+    font-size: 1.25vw;
+  }
+  @media screen and (max-width: 959px) {
+    font-size: 1.8vw;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 1.4vw;
+  }
+  @media screen and (max-width: 599px) {
+    font-size: 2.6vw;
+  }
+}

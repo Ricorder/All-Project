@@ -1,0 +1,94 @@
+@import "assets/scss/flex-rules";
+
+.team {
+  &__title {
+    color: black;
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 15px;
+    line-height: 16px;
+    margin-bottom: 0;
+  }
+  // &__list {
+  // }
+  &__list--item {
+    padding: 12px 0;
+    border-bottom: 1px solid #eeeeee;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+  &__list--row {
+    @extend .flex-row-space-between;
+  }
+  &__list--title {
+    flex: auto;
+  }
+  &__list--name {
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+  }
+  // &__list--role {}
+  &__list--badge {
+    background-color: #999999;
+    font-size: 10px;
+    color: #fff;
+    text-align: center;
+    width: 96px;
+    padding: 5px 10px;
+    border-radius: 50px;
+    flex: 0 0 auto;
+    font-weight: 400;
+    white-space: nowrap;
+    line-height: 1;
+    &.primary {
+      background-color: #E91E63;
+    }
+    &.green {
+      background-color: #65A45B;
+    }
+  }
+  // &__list--descr {}
+  &__list--text {
+    font-size: 14px;
+    font-weight: 300;
+    color: #000;
+  }
+  &__btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 24px;
+    height: 24px;
+    margin: 0 !important;
+  }
+  &__card {
+    border: 1px solid #eee !important;
+    box-shadow: none !important;
+    margin-top: 47px !important;
+  }
+  &__card--body {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+}
+
+.icon-small {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  text-align: center;
+  width: 46px !important;
+  height: 44px !important;
+  background-color: #999 !important;
+  background: #999 !important;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+  margin-top: -10px !important;
+  & > svg {
+    width: 25px !important;
+    height: 25px !important;
+    margin-bottom: 6px !important;
+  }
+}

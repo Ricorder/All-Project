@@ -1,0 +1,321 @@
+.corporate-approval {
+  &__wrapper {
+    padding-top: 30px;
+    padding-left: 21px;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #555555;
+  }
+
+  &__container {
+
+  }
+  &__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    height: 100%;
+  }
+  &__input {
+    width: 100%;
+    max-width: 250px;
+    border: none;
+    border-bottom: 1px solid #C4C4C4;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 300;
+    color: #C4C4C4;
+    padding: 4px 0;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    &:focus {
+      color: #555555;
+    }
+  }
+  &__date-range {
+    display: inline-flex;
+    flex-flow: row;
+    align-items: center;
+    align-content: center;
+    border-bottom: 1px solid #C4C4C4;
+    padding-bottom: 4px;
+    padding-right: 12px;
+    width: 100%;
+    svg {
+      width: 18px !important;
+      height: 18px !important;
+    }
+  }
+  &__info-title {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 11px;
+    color: #555555;
+    margin-bottom: 5px;
+  }
+  &__info-value {
+    @extend .corporate-approval__info-title;
+    margin-bottom: 0 !important;
+    margin-left: 10px;
+  }
+  &__stats {
+    color: #999;
+    width: 12px !important;
+    height: 12px !important;
+  }
+  &__form--control {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    &.corporate-approval__control--centered {
+      justify-content: center;
+    }
+  }
+  &__timeline {
+    position: relative;
+    padding-right: 85px;
+    min-height: 95px;
+  }
+  &__timeline--row {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    padding-bottom: 15px;
+    position: relative;
+    &:last-child {
+      .corporate-approval__tree--item:before {
+        display: none;
+      }
+    }
+  }
+  &__timeline--tree {
+    flex: 1 0 auto;
+    width: 80px;
+    position: relative;
+    margin-left: -13px;
+  }
+  &__timeline--card {
+    width: 100%;
+    position: relative;
+    padding: 10px 75px 10px 25px;
+    border: 1px solid #C4C4C4;
+    border-radius: 4px;
+    &:before {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border-right: solid 10px #C4C4C4;
+      border-bottom: solid 8px white;
+      border-top: solid 8px white;
+      position: absolute;
+      left: -10px;
+      top: 12px;
+    }
+    &:after {
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      border-right: solid 8px #fff;
+      border-bottom: solid 7px transparent;
+      border-top: solid 7px transparent;
+      position: absolute;
+      left: -8px;
+      top: 13px;
+    }
+  }
+  &__timeline--actions {
+    position: absolute;
+    right: 0;
+    top: 0;
+    flex: 1 0 auto;
+    width: 85px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+  &__tree--item {
+    width: 46px;
+    height: 100%;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 22px;
+      bottom: -15px;
+      width: 2px;
+      height: 100%;
+      background-color: #C4C4C4;
+    }
+  }
+  &__avatar {
+    width: 46px;
+    height: 46px;
+    background-color: #EF983A;
+    border-radius: 50%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    &.gray {
+      background-color: #CCCCCC;
+      color: #000000;
+    }
+    &.green {
+      background-color: #65A45B;
+      color: #ffffff;
+    }
+    &.primary {
+      background-color: #E91E63;
+      color: #ffffff;
+    }
+    &.orange {
+      background-color: #EF983A;
+      color: #ffffff;
+    }
+  }
+  &__card--header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+  &__card--content {
+    margin-bottom: 12px;
+  }
+  &__card--badge {
+    background-color: #999999;
+    font-size: 10px;
+    color: #fff;
+    text-align: center;
+    padding: 0 8px;
+    border-radius: 50px;
+    flex: 0 0 auto;
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 120px;
+    margin-right: 5px;
+    &.gray {
+      background-color: #CCCCCC;
+      color: #000000;
+    }
+    &.green {
+      background-color: #65A45B;
+      color: #ffffff;
+    }
+    &.primary {
+      background-color: #E91E63;
+      color: #ffffff;
+    }
+    &.orange {
+      background-color: #EF983A;
+      color: #ffffff;
+    }
+  }
+  &__card--date {
+    font-size: 11px;
+    color: #000;
+  }
+  &__card--panel {
+    position: absolute;
+    width: 55px;
+    height: 100%;
+    top: 0;
+    right: 0;
+  }
+  &__note {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 10px 10px 0 0;
+    cursor: pointer;
+    & > svg {
+      width: 20px !important;
+      height: 20px !important;
+    }
+  }
+  &__note--count {
+    font-size: 14px;
+    font-weight: normal;
+    color: #555555;
+  }
+  &__card--footer {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    font-size: 11px;
+    font-weight: normal;
+  }
+  &__vote-for {
+    color: #65A45B;
+    padding: 0 5px 0 0;
+  }
+  &__abstained {
+    color: #EF983A;
+    padding: 0 5px;
+  }
+  &__vote-against {
+    color: #E91E63;
+    padding: 0 0 0 5px;
+  }
+  &__actions--btn {
+    width: 65px;
+    height: 37px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: #999999;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-right: 0;
+    transition: all ease .3s;
+    &:hover {
+      background-color: lighten(#999, 5%);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    &:active {
+      background-color: darken(#999, 5%);
+      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+    }
+    & > svg {
+      fill: #ffffff !important;
+    }
+  }
+}
+@media screen and (max-width: 1200px) {
+  .corporate-approval {
+    &__timeline {
+      padding-right: 40px;
+    }
+    &__timeline--actions {
+      width: 36px;
+    }
+    &__actions--btn {
+      width: 32px;
+      height: 32px;
+    }
+    &__timeline--tree {
+      width: 60px;
+    }
+  }
+}

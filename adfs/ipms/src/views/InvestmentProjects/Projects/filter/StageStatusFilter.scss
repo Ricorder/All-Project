@@ -1,0 +1,94 @@
+@import "../Project";
+@import "../description/DetailedDescription";
+@import "OrgStructureFilter";
+
+.account-filter {
+  &__filter {
+    height: 97px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+    border-radius: 5px !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    margin-bottom: 10px !important;
+
+    &--header {
+      margin-left: 13px !important;
+    }
+
+    &--title {
+      @extend .project__wrapper--title;
+      color: #333333;
+      margin-top: 11px !important;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    &--cardIcon {
+      @extend .project__wrapper--cardIcon;
+      width: 46px;
+      height: 46px;
+      margin-top: -13px !important;
+      margin-right: 11px !important;
+      border-radius: 5px !important;
+      svg {
+        margin-top: 4px !important;
+      }
+    }
+
+    &--cardBody {
+      padding: 0px 8px 10px 8px !important;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-end;
+    }
+
+    &--form {
+      width: 100%;
+    }
+
+    &--formControl {
+      display: flex;
+      width: 100%;
+    }
+
+    &--dateRange {
+      @extend .detailed-description__date-range;
+      margin-left: 2px;
+      margin-right: 2px;
+      input:focus ~ label,
+      input:valid ~ label {
+        top: 10px !important;
+      }
+    }
+
+    &--input {
+      @extend .detailed-description__input;
+    }
+
+    &--infoTitle {
+      @extend .detailed-description__info-title;
+      top: 30px;
+      font-size: 12px;
+      color: #555555;
+    }
+  }
+}
+.stageStatusFilter {
+  &__form {
+    @extend .orgStructureFilter__form;
+  }
+  &__select {
+    width: calc(50% - 4px) !important;
+    @extend .orgStructureFilter__select;
+    &:first-child {
+      margin-right: 4px;
+    }
+    &:last-child {
+      margin-left: 4px;
+    }
+  }
+  &__menu {
+    font-size: 12px !important;
+    min-height: 20px !important;
+  }
+}
